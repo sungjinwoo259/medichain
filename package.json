@@ -1,0 +1,48 @@
+{
+  "name": "medichain",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "compile": "hardhat compile",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "grant-role": "hardhat run scripts/grant-role.js --network sepolia",
+    "grant-all-roles": "hardhat run scripts/grant-all-roles.js --network sepolia",
+    "setup-default-address": "hardhat run scripts/grant-all-roles.js --network sepolia",
+    "copy-abi": "node scripts/copy-abi.js",
+    "setup-contract": "npm run compile && npm run copy-abi",
+    "check-env": "node scripts/check-env.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "ethers": "^6.15.0",
+    "firebase": "^12.6.0",
+    "html5-qrcode": "^2.3.8",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.6",
+    "web3": "^4.16.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.22",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "hardhat": "^2.27.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.15",
+    "vite": "^7.2.4"
+  }
+}
