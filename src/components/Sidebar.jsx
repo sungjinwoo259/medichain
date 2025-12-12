@@ -8,8 +8,8 @@ function linkClasses({ isActive }) {
   return [
     baseLinkClasses,
     isActive
-      ? 'bg-primary-600 text-white'
-      : 'text-slate-300 hover:bg-slate-800 hover:text-white',
+      ? 'bg-[#4A90E2] text-white'
+      : 'text-[#6B7280] hover:bg-[#E8F2F8] hover:text-[#1A1A1A]',
   ].join(' ')
 }
 
@@ -21,7 +21,7 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="hidden w-60 flex-shrink-0 border-r border-slate-800 bg-slate-950/80 px-4 py-4 text-sm md:block">
+    <aside className="hidden w-60 flex-shrink-0 border-r border-[#D1E5F0] bg-white px-4 py-4 text-sm md:block">
       <nav className="space-y-1">
         <NavLink to="/dashboard" className={linkClasses}>
           Dashboard

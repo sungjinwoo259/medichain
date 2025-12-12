@@ -4,15 +4,15 @@ export function Navbar() {
   const { user, logout } = useAuth()
 
   return (
-    <header className="w-full border-b border-slate-800 bg-slate-900/80 backdrop-blur">
+    <header className="w-full border-b border-[#D1E5F0] bg-white backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <div className="flex items-center gap-2">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary-600 text-sm font-semibold">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#4A90E2] text-sm font-semibold text-white">
             MC
           </span>
           <div>
-            <p className="text-sm font-semibold text-slate-50">MediChain</p>
-            <p className="text-xs text-slate-400">
+            <p className="text-sm font-semibold text-[#1A1A1A]">MediChain</p>
+            <p className="text-xs text-[#6B7280]">
               Prescription Drug Traceability on Blockchain
             </p>
           </div>
@@ -21,15 +21,15 @@ export function Navbar() {
           {user && (
             <>
               <div className="text-right">
-                <p className="text-xs font-medium text-slate-200">{user.name}</p>
-                <p className="text-[11px] text-slate-400 capitalize">
+                <p className="text-xs font-medium text-[#1A1A1A]">{user.name}</p>
+                <p className="text-[11px] text-[#6B7280] capitalize">
                   {user.role}
                 </p>
               </div>
               <button
                 type="button"
                 onClick={logout}
-                className="rounded-md bg-slate-800 px-3 py-1.5 text-xs font-medium text-slate-100 hover:bg-slate-700 border border-slate-700"
+                className="rounded-md bg-[#F7FBFF] px-3 py-1.5 text-xs font-medium text-[#1A1A1A] hover:bg-[#E8F2F8] border border-[#D1E5F0]"
               >
                 Logout
               </button>

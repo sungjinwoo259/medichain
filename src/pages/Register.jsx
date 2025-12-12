@@ -108,26 +108,26 @@ export function Register() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-4 py-12">
+    <div className="flex min-h-screen items-center justify-center bg-[#F7FBFF] px-4 py-12">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="mb-8 text-center">
-          <h1 className="mb-2 text-3xl font-bold text-white">MediChain</h1>
-          <p className="text-sm text-slate-400">
+          <h1 className="mb-2 text-3xl font-bold text-[#1A1A1A]">MediChain</h1>
+          <p className="text-sm text-[#6B7280]">
             Decentralized Prescription Drug Tracking System
           </p>
         </div>
 
         {/* Register Card */}
-        <div className="rounded-2xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-sm p-8 shadow-2xl">
-          <h2 className="mb-2 text-xl font-semibold text-white">Create Account</h2>
-          <p className="mb-6 text-sm text-slate-400">
+        <div className="rounded-2xl border border-[#D1E5F0] bg-white p-8 shadow-lg">
+          <h2 className="mb-2 text-xl font-semibold text-[#1A1A1A]">Create Account</h2>
+          <p className="mb-6 text-sm text-[#6B7280]">
             Register for MediChain. Your account will be pending until an admin assigns your role.
           </p>
 
           {/* Error Message */}
           {error && (
-            <div className="mb-4 rounded-lg border border-red-500/50 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+            <div className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
               <div className="flex items-center gap-2">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
@@ -139,7 +139,7 @@ export function Register() {
 
           {/* Success Message */}
           {success && (
-            <div className="mb-4 rounded-lg border border-green-500/50 bg-green-500/10 px-4 py-3 text-sm text-green-200">
+            <div className="mb-4 rounded-lg border border-[#36C48E] bg-[#E0F8F0] px-4 py-3 text-sm text-[#36C48E]">
               <div className="flex items-center gap-2">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -152,7 +152,7 @@ export function Register() {
           {/* Register Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="mb-1 block text-sm font-medium text-slate-300">
+              <label htmlFor="name" className="mb-1 block text-sm font-medium text-[#1A1A1A]">
                 Full Name *
               </label>
               <input
@@ -162,13 +162,13 @@ export function Register() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="John Doe"
-                className="w-full rounded-lg border border-slate-600 bg-slate-900/50 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="w-full rounded-lg border border-[#D1E5F0] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#6B7280] focus:border-[#4A90E2] focus:outline-none focus:ring-2 focus:ring-[#4A90E2]/20"
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="mb-1 block text-sm font-medium text-slate-300">
+              <label htmlFor="email" className="mb-1 block text-sm font-medium text-[#1A1A1A]">
                 Email Address *
               </label>
               <input
@@ -178,13 +178,13 @@ export function Register() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="your@email.com"
-                className="w-full rounded-lg border border-slate-600 bg-slate-900/50 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="w-full rounded-lg border border-[#D1E5F0] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#6B7280] focus:border-[#4A90E2] focus:outline-none focus:ring-2 focus:ring-[#4A90E2]/20"
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="role" className="mb-1 block text-sm font-medium text-slate-300">
+              <label htmlFor="role" className="mb-1 block text-sm font-medium text-[#1A1A1A]">
                 Account Type *
               </label>
               <select
@@ -192,7 +192,7 @@ export function Register() {
                 name="role"
                 value={form.role}
                 onChange={handleChange}
-                className="w-full rounded-lg border border-slate-600 bg-slate-900/50 px-4 py-3 text-sm text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="w-full rounded-lg border border-[#D1E5F0] bg-white px-4 py-3 text-sm text-[#1A1A1A] focus:border-[#4A90E2] focus:outline-none focus:ring-2 focus:ring-[#4A90E2]/20"
                 required
               >
                 <option value="consumer">Consumer (Auto-approved)</option>
@@ -200,7 +200,7 @@ export function Register() {
                 <option value="distributor">Distributor (Requires Admin Approval)</option>
                 <option value="pharmacy">Pharmacy (Requires Admin Approval)</option>
               </select>
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-[#6B7280]">
                 {form.role === 'consumer' 
                   ? '✓ Consumer accounts are automatically approved and can login immediately.'
                   : '⚠ This role requires admin approval before you can access the system.'}
@@ -208,7 +208,7 @@ export function Register() {
             </div>
 
             <div>
-              <label htmlFor="wallet" className="mb-1 block text-sm font-medium text-slate-300">
+              <label htmlFor="wallet" className="mb-1 block text-sm font-medium text-[#1A1A1A]">
                 MetaMask Wallet Address (Optional)
               </label>
               <input
@@ -218,15 +218,15 @@ export function Register() {
                 value={form.wallet}
                 onChange={handleChange}
                 placeholder="0x..."
-                className="w-full rounded-lg border border-slate-600 bg-slate-900/50 px-4 py-3 font-mono text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="w-full rounded-lg border border-[#D1E5F0] bg-white px-4 py-3 font-mono text-sm text-[#1A1A1A] placeholder-[#6B7280] focus:border-[#4A90E2] focus:outline-none focus:ring-2 focus:ring-[#4A90E2]/20"
               />
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-[#6B7280]">
                 You can add your wallet address later. It's required for blockchain interactions.
               </p>
             </div>
 
             <div>
-              <label htmlFor="password" className="mb-1 block text-sm font-medium text-slate-300">
+              <label htmlFor="password" className="mb-1 block text-sm font-medium text-[#1A1A1A]">
                 Password *
               </label>
               <input
@@ -236,13 +236,13 @@ export function Register() {
                 value={form.password}
                 onChange={handleChange}
                 placeholder="Min. 6 characters"
-                className="w-full rounded-lg border border-slate-600 bg-slate-900/50 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="w-full rounded-lg border border-[#D1E5F0] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#6B7280] focus:border-[#4A90E2] focus:outline-none focus:ring-2 focus:ring-[#4A90E2]/20"
                 required
               />
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className="mb-1 block text-sm font-medium text-slate-300">
+              <label htmlFor="confirmPassword" className="mb-1 block text-sm font-medium text-[#1A1A1A]">
                 Confirm Password *
               </label>
               <input
@@ -252,7 +252,7 @@ export function Register() {
                 value={form.confirmPassword}
                 onChange={handleChange}
                 placeholder="Re-enter password"
-                className="w-full rounded-lg border border-slate-600 bg-slate-900/50 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="w-full rounded-lg border border-[#D1E5F0] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#6B7280] focus:border-[#4A90E2] focus:outline-none focus:ring-2 focus:ring-[#4A90E2]/20"
                 required
               />
             </div>
@@ -260,7 +260,7 @@ export function Register() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500/50 disabled:cursor-not-allowed disabled:opacity-50"
+              className="w-full rounded-lg bg-[#4A90E2] px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#357ABD] focus:outline-none focus:ring-2 focus:ring-[#4A90E2]/50 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">
@@ -278,11 +278,11 @@ export function Register() {
 
           {/* Login Link */}
           <div className="mt-6 text-center">
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-[#6B7280]">
               Already have an account?{' '}
               <Link
                 to="/login"
-                className="font-semibold text-blue-400 hover:text-blue-300 hover:underline"
+                className="font-semibold text-[#4A90E2] hover:text-[#357ABD] hover:underline"
               >
                 Sign in here
               </Link>
@@ -290,8 +290,8 @@ export function Register() {
           </div>
 
           {/* Info */}
-          <div className="mt-6 rounded-lg border border-amber-500/50 bg-amber-500/10 px-4 py-3">
-            <p className="text-xs text-amber-200">
+          <div className="mt-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3">
+            <p className="text-xs text-amber-700">
               <strong>Note:</strong> Consumer accounts are automatically approved. Other roles (Manufacturer, Distributor, Pharmacy) require admin approval before you can access the system.
             </p>
           </div>

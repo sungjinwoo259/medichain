@@ -8,6 +8,178 @@ body,
   height: 100%;
 }
 
+:root {
+  --surface: #F7FBFF;
+  --surface-muted: #FFFFFF;
+  --surface-strong: #E8F2F8;
+  --border: #D1E5F0;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B7280;
+  --primary: #4A90E2;
+  --primary-strong: #357ABD;
+  --primary-soft: #E8F2FC;
+  --secondary: #67C6E3;
+  --secondary-soft: #E0F4F9;
+  --success: #36C48E;
+  --success-soft: #E0F8F0;
+  --danger: #E54848;
+}
+
 body {
-  @apply bg-slate-950 text-slate-50 antialiased;
+  @apply antialiased;
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
+/* Typography smoothing for light theme */
+h1, h2, h3 {
+  @apply text-slate-900 font-semibold;
+}
+
+p, li, span, label {
+  @apply text-slate-800;
+}
+
+/* Light theme overrides for commonly used dark utility classes */
+.bg-white {
+  background-color: var(--surface-muted) !important;
+}
+.bg-slate-950,
+.bg-slate-900,
+.bg-slate-900\/90,
+.bg-slate-900\/50,
+.bg-slate-900\/40 {
+  background-color: var(--surface) !important;
+}
+
+.bg-slate-50 {
+  background-color: #F0F7FC !important;
+}
+.bg-slate-800,
+.bg-slate-800\/90,
+.bg-slate-800\/70,
+.bg-slate-800\/50,
+.bg-slate-800\/20 {
+  background-color: var(--surface-muted) !important;
+}
+
+.bg-slate-700,
+.bg-slate-700\/50 {
+  background-color: var(--surface-strong) !important;
+}
+
+.border-slate-800,
+.border-slate-800\/50,
+.border-slate-700,
+.border-slate-700\/50,
+.border-slate-600,
+.border-slate-600\/50,
+.border-slate-500\/50,
+.border-slate-400\/50,
+.border-slate-200,
+.border-slate-300 {
+  border-color: var(--border) !important;
+}
+
+.text-white,
+.text-slate-50,
+.text-slate-100,
+.text-slate-200,
+.text-slate-900,
+.text-slate-800 {
+  color: var(--text-primary) !important;
+}
+
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-slate-600 {
+  color: var(--text-secondary) !important;
+}
+
+.bg-gradient-to-r {
+  background-image: none !important;
+}
+
+/* Primary action overrides for light theme */
+.bg-blue-600,
+.bg-blue-500 {
+  background-color: var(--primary) !important;
+  color: #ffffff !important;
+}
+.hover\:bg-blue-700:hover,
+.hover\:bg-blue-600:hover {
+  background-color: var(--primary-strong) !important;
+}
+.bg-blue-500\/10,
+.bg-blue-50,
+.bg-blue-100 {
+  background-color: var(--primary-soft) !important;
+}
+.text-blue-600,
+.text-blue-700 {
+  color: var(--primary) !important;
+}
+.border-blue-500\/50,
+.border-blue-100,
+.border-blue-200 {
+  border-color: var(--primary) !important;
+}
+
+/* Secondary color overrides */
+.bg-cyan-500,
+.bg-cyan-600 {
+  background-color: var(--secondary) !important;
+  color: #ffffff !important;
+}
+.bg-cyan-50,
+.bg-cyan-100 {
+  background-color: var(--secondary-soft) !important;
+}
+.text-cyan-600,
+.text-cyan-700 {
+  color: var(--secondary) !important;
+}
+
+/* Success / accent green overrides */
+.bg-green-500\/10,
+.bg-green-50,
+.bg-green-100,
+.bg-emerald-50,
+.bg-emerald-100 {
+  background-color: var(--success-soft) !important;
+}
+.border-green-500\/50,
+.border-green-200,
+.border-emerald-200 {
+  border-color: var(--success) !important;
+}
+.bg-emerald-600,
+.bg-green-600 {
+  background-color: var(--success) !important;
+  color: #ffffff !important;
+}
+.hover\:bg-emerald-700:hover,
+.hover\:bg-green-700:hover {
+  background-color: #2BA875 !important;
+}
+.text-green-600,
+.text-green-700,
+.text-emerald-600,
+.text-emerald-700 {
+  color: var(--success) !important;
+}
+
+/* Danger / error overrides */
+.border-red-500\/50,
+.border-red-200 {
+  border-color: rgba(229, 72, 72, 0.5) !important;
+}
+.bg-red-500\/10,
+.bg-red-50 {
+  background-color: rgba(229, 72, 72, 0.1) !important;
+}
+.text-red-600,
+.text-red-700 {
+  color: var(--danger) !important;
 }
